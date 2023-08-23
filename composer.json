@@ -1,0 +1,90 @@
+{
+  "name": "artestiq/novaissues",
+  "type": "project",
+  "description": "Artestiq mock project for isolating Nova issues",
+  "keywords": [
+    "framework",
+    "laravel"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^8.1",
+    "guzzlehttp/guzzle": "^7.5",
+    "itsgoingd/clockwork": "^5.0",
+    "laravel/framework": "^9.32",
+    "laravel/nova": "4.25.1",
+    "laravel/sanctum": "^2.14.1",
+    "laravel/tinker": "^2.5",
+    "league/flysystem-aws-s3-v3": "^3.0",
+    "titasgailius/search-relations": "^1.0",
+    "whitecube/nova-flexible-content": "dev-master",
+    "wikimedia/composer-merge-plugin": "^2.0"
+  },
+  "require-dev": {
+    "fakerphp/faker": "^1.9.1",
+    "laravel/breeze": "^1.9",
+    "laravel/sail": "^1.16.1",
+    "mockery/mockery": "^1.5.1",
+    "nunomaduro/collision": "^6.1",
+    "nwidart/laravel-modules": "^9.0",
+    "phpunit/phpunit": "^9.5.10",
+    "spatie/laravel-ignition": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Database\\Factories\\": "database/factories/",
+      "Database\\Seeders\\": "database/seeders/",
+      "Modules\\": "Modules/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi"
+    ]
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": []
+    },
+    "merge-plugin": {
+      "include": [],
+      "require": [],
+      "recurse": true,
+      "replace": false,
+      "ignore-duplicates": false,
+      "merge-dev": true,
+      "merge-extra": false,
+      "merge-extra-deep": false,
+      "merge-scripts": false
+    }
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "wikimedia/composer-merge-plugin": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://nova.laravel.com"
+    }
+  ]
+}
