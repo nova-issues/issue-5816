@@ -4,6 +4,7 @@ namespace App\Nova;
 
 use App\Nova\Layouts\ContentLayout;
 use App\Nova\Layouts\QuoteLayout;
+use Ebess\AdvancedNovaMediaLibrary\Fields\Images;
 use Eminiarts\Tabs\Tab;
 use Eminiarts\Tabs\Tabs;
 use Eminiarts\Tabs\Traits\HasTabs;
@@ -49,14 +50,6 @@ class Page extends Resource
 
     public static $globallySearchable = true;
 
-    public static $meta_robots_options = [
-        'index, follow',
-        'follow',
-        'noindex, follow',
-        'index, nofollow',
-        'noindex, nofollow',
-    ];
-
     public static function getFlexibleLayoutCasts(): array
     {
         return [
@@ -86,6 +79,9 @@ class Page extends Resource
                     ->separator('-')
                     ->rules('required')->required()
                     ->sortable(),
+                Images::make('Main image', 'main')
+                    ->conversionOnIndexView('nova-thumb')
+                    ->rules('required')->required(),
                 DateTime::make(__('Updated'), 'updated_at')
                     ->displayUsing(fn ($value) => $value->diffForHumans())
                     ->sortable()->exceptOnForms(),

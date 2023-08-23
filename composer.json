@@ -9,15 +9,17 @@
   "license": "MIT",
   "require": {
     "php": "^8.1",
+    "ebess/advanced-nova-media-library": "4.1.2",
     "eminiarts/nova-tabs": "^2.2.1",
     "guzzlehttp/guzzle": "^7.5",
     "itsgoingd/clockwork": "^5.0",
     "laravel/framework": "^9.32",
-    "laravel/nova": "4.25.1",
+    "laravel/nova": "4.27.12",
     "laravel/sanctum": "^2.14.1",
     "laravel/tinker": "^2.5",
     "league/flysystem-aws-s3-v3": "^3.0",
     "manogi/nova-tiptap": "^3.0.6",
+    "spatie/laravel-medialibrary": "^10.0.0",
     "titasgailius/search-relations": "^1.0",
     "whitecube/nova-flexible-content": "dev-master",
     "wikimedia/composer-merge-plugin": "^2.0"
