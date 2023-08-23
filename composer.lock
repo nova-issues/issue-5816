@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "94972aa2dc073adf39cc724c49d2e4a6",
+    "content-hash": "a7738533431065a1c5d6ef00d2013c50",
     "packages": [
         {
             "name": "aws/aws-crt-php",
@@ -982,6 +982,67 @@
                 }
             ],
             "time": "2023-01-14T14:17:03+00:00"
+        },
+        {
+            "name": "eminiarts/nova-tabs",
+            "version": "2.2.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/eminiarts/nova-tabs.git",
+                "reference": "c9091cf6e8646dfb07cae5dd7fa7ba718f6e1433"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/eminiarts/nova-tabs/zipball/c9091cf6e8646dfb07cae5dd7fa7ba718f6e1433",
+                "reference": "c9091cf6e8646dfb07cae5dd7fa7ba718f6e1433",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "laravel/nova": "^4.12",
+                "nova-kit/nova-packages-tool": "^1.3",
+                "php": "^7.4|^8"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2",
+                "orchestra/testbench": "^6",
+                "roave/security-advisories": "dev-latest"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Eminiarts\\Tabs\\TabsServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Eminiarts\\Tabs\\": "src/",
+                    "Eminiarts\\Tabs\\Tests\\": "tests/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emini Arts GmbH",
+                    "email": "support@eminiarts.ch",
+                    "homepage": "https://eminiarts.ch"
+                }
+            ],
+            "description": "Laravel Nova - Tabs.",
+            "keywords": [
+                "laravel",
+                "nova"
+            ],
+            "support": {
+                "issues": "https://github.com/eminiarts/nova-tabs/issues",
+                "source": "https://github.com/eminiarts/nova-tabs/tree/2.2.3"
+            },
+            "time": "2022-10-25T19:58:02+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -2689,6 +2750,59 @@
                 }
             ],
             "time": "2023-08-05T12:09:49+00:00"
+        },
+        {
+            "name": "manogi/nova-tiptap",
+            "version": "v3.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/manogi/nova-tiptap.git",
+                "reference": "21ebea156d0bbc100dab15f47d8417f44ca45d7c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/manogi/nova-tiptap/zipball/21ebea156d0bbc100dab15f47d8417f44ca45d7c",
+                "reference": "21ebea156d0bbc100dab15f47d8417f44ca45d7c",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/nova": "^4.0",
+                "php": "^8.0|^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^7.3.0",
+                "phpunit/phpunit": "^9.2"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Manogi\\Tiptap\\FieldServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Manogi\\Tiptap\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "A Laravel Nova tiptap editor field.",
+            "keywords": [
+                "editor",
+                "laravel",
+                "nova",
+                "tiptap",
+                "vue"
+            ],
+            "support": {
+                "issues": "https://github.com/manogi/nova-tiptap/issues",
+                "source": "https://github.com/manogi/nova-tiptap/tree/v3.2.1"
+            },
+            "time": "2023-08-20T09:50:47+00:00"
         },
         {
             "name": "monolog/monolog",
