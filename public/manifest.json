@@ -1,0 +1,17 @@
+{
+  "name": "Artestiq, De corporate designers",
+  "short_name": "Artestiq",
+  "lang": "nl-NL",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "black",
+  "theme_color": "#888A77",
+  "icons": [
+      {
+        "src": "/images/favicon.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any maskable"
+      }
+    ]
+}
